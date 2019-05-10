@@ -20,12 +20,12 @@ class AdminLTEController extends Controller
         break;
         case "forgot-password.html":
            return view('AdminLTE.forgot-password');
-        break;
+        break;*/
         case "404.html":
            return view('AdminLTE.404');
         break;
         default:
-             return view('AdminLTE.404');*/
+             return view('AdminLTE.404');
         break;
        }
     }
