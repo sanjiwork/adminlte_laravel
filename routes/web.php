@@ -10,5 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', 'AdminLTEController@index');
+Route::get('/index.html', 'AdminLTEController@index');
 Route::get('/{id?}', 'AdminLTEController@index');
