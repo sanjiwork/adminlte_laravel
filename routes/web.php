@@ -12,4 +12,6 @@
 */
 Route::get('/', 'AdminLTEController@index');
 Route::get('/index.html', 'AdminLTEController@index');
+Route::get('/news.html', 'NewsController@index');
+Route::get('/news.html/{id}', 'NewsController@show');
 Route::get('/{id?}', 'AdminLTEController@index');
