@@ -22,13 +22,19 @@
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-header">
-                            <h3 class="box-title"></h3>
+                            <h3 class="box-title">
+                                <a href="{{ url('/news.html/create/0') }}" class="btn  btn-sm btn-success">
+                                    新增資料</a>
+
+                            </h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
+
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
+                                    <th>功能</th>
                                     <th>主旨</th>
                                     <th>發佈人員</th>
                                     <th>點閱次數</th>
@@ -39,6 +45,12 @@
 
                                 @foreach($posts as $post)
                                 <tr>
+                                    <td>
+                                        <a href="{{ url('/news.html/delete/'.$post->id) }}" class="btn btn-sm btn-danger">
+                                            刪除</a>
+                                        <a href="{{ url('/news.html/update/'.$post->id) }}" class="btn  btn-sm btn-info">
+                                            修改</a>
+                                    </td>
                                     <td>
                                         <a href="{{ url('/news.html/'.$post->id) }}">
                                         {{ $post->title }}</a></td>
@@ -52,6 +64,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
+                                    <th>功能</th>
                                     <th>主旨</th>
                                     <th>發佈人員</th>
                                     <th>點閱次數</th>
