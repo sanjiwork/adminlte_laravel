@@ -34,13 +34,13 @@
             </span>
                 </a>
                 <ul class="treeview-menu {{ request()->is('index.html') ? 'show' : '' }}">
-                    <li class="{{ request()->is('index.html') ? 'active' : '' }}"><a
-                                href="{{ asset('/index.html') }}"><i class="fa fa-circle-o"></i> 資訊分析</a></li>
+                    <li class="{{ request()->is('index') ? 'active' : '' }}"><a
+                                href="{{ asset('/index') }}"><i class="fa fa-circle-o"></i> 資訊分析</a></li>
                 </ul>
 
             </li>
-            <li class="{{ request()->is('news.html') ? 'active' : '' }}">
-                <a href="{{ asset('/news.html') }}">
+            <li class="{{ request()->is('posts') ? 'active' : '' }}">
+                <a href="{{ asset('/posts') }}">
                     <i class="fa fa-circle-o"></i> <span>最新消息</span>
                 </a>
             </li>
