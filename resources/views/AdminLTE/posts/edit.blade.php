@@ -28,6 +28,14 @@
 
                             <div class="tab-content">
                                 <div class="active tab-pane" id="activity">
+                                    @if ($errors->any())
+                                        <div class="callout callout-danger">
+                                            <h4>修改失敗!</h4>
+                                            @foreach ($errors->all() as $error)
+                                                <li> {{$error}}</li>
+                                            @endforeach
+                                        </div>
+                                @endif
                                     <!-- Post -->
                                     <div class="post">
                                         <div class="form-group">
@@ -38,7 +46,7 @@
                                         <div class="form-group">
                                             <label for="content">內容</label>
                                             <textarea id="content" name="content" class="form-control" rows="5"
-                                                      placeholder="Enter ...">{{$post->content}}</textarea>
+                                                      placeholder="請輸入 ...">{{$post->content}}</textarea>
                                         </div>
 
                                         <br>
