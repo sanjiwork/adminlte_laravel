@@ -171,7 +171,7 @@ return [
         'sex'                   => '性別',
         'size'                  => '大小',
         'time'                  => '時間',
-        'title'                 => '標題',
+        'title'                 => '主旨',
         'username'              => '使用者名稱',
         'year'                  => '年',
     ],
