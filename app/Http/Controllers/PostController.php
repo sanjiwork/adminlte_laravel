@@ -1,11 +1,13 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
 use App\Post;
 use Illuminate\Http\Request;
-use Faker\Factory as Faker;
-use Illuminate\Support\Carbon;
+
+//use Faker\Factory as Faker;
+//use Illuminate\Support\Carbon;
 use Redirect;
 
 class PostController extends Controller
@@ -33,13 +35,14 @@ class PostController extends Controller
      */
     public function create()
     {
+
         return view('AdminLTE.posts.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(PostRequest $request)
@@ -57,7 +60,7 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -74,7 +77,7 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -90,11 +93,11 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostRequest $request, $id)
     {
         $post = Post::findOrFail($id);
         $post->update($request->all());
@@ -104,7 +107,7 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
